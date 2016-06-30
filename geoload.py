@@ -15,3 +15,13 @@ cur = conn.cursor()
 
 cur.execute('''
 CREATE TABLE IF NOT EXISTS Locations (address TEXT, geodata TEXT)''')
+fh = open("geotrackerdata.txt")
+count = 0
+for line in fh:
+    if count > 200 : break
+    address = line.split(',')
+    if address[2] and address[3] and address[4] == 'null':
+        continue #excluding nulls. We don't want unresolved coordinates
+    print address[2], address[3], address[4]
+    addressString = address[2] + " " + address[3] + " " + address[4]
+    print addressString
