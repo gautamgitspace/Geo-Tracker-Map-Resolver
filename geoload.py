@@ -25,3 +25,37 @@ for line in fh:
     print address[2], address[3], address[4]
     addressString = address[2] + " " + address[3] + " " + address[4]
     print addressString
+
+    cur.execute("SELECT geodata FROM Locations WHERE address= ?", (buffer(addressString), ))
+    try:
+      data = cur.fetchone()[0]
+      print "Found in database ", addressString
+      continue
+    except:
+      pass
+
+      print 'Resolving', addressString
+      url = serviceurl + urllib.urlencode({"sensor":"false", "address": addressString})
+      print 'Retrieving', url
+      uh = urllib.urlopen(url, context=scontext)
+      data = uh.read()
+      print 'Retrieved',len(data),'characters',data[:20].replace('\n',' ')
+      count = count + 1
+      try:
+          js = json.loads(str(data))
+      except:
+          continue
+      if 'status' not in js or (js['status'] != 'OK' and js['status'] != 'ZERO_RESULTS') :
+          print "========================="
+          print "   Failure To Retrieve"
+          print "========================="
+          print data
+          break
+      cur.execute('''INSERT INTO Locations (address, geodata)
+      VALUES ( ?, ? )''', ( buffer(addressString),buffer(data) ) )
+      conn.commit()
+      time.sleep(1)
+
+print "===================="
+print " RUN GEODUMP.PY NOW "
+print "===================="
