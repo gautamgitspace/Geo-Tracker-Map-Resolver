@@ -1,0 +1,23 @@
+myData = [
+[42.2641875,-89.0179694, 'E State St, Rockford, IL, USA'],
+[42.954902,-78.829971, 'Heath St, Buffalo, NY 14214, USA'],
+[42.9589377,-78.7680268, 'Main St, Buffalo, NY, USA'],
+[42.9586819,-78.86424, 'Kenmore Ave, Buffalo, NY, USA'],
+[42.9655369,-78.8159308, 'Springville Ave, Buffalo, NY 14226, USA'],
+[42.9186282,-78.8136846, 'Bailey Ave, Buffalo, NY, USA'],
+[42.9896999,-78.814692, 'N Bailey Ave, Buffalo, NY 14226, USA'],
+[42.9835409,-78.8101229, 'Clifford Heights, Buffalo, NY 14226, USA'],
+[42.978248,-78.7772699, 'Sheridan Dr, Amherst, NY, USA'],
+[42.9910841,-78.7591622, 'Maple Rd, Buffalo, NY, USA'],
+[43.0157612,-78.7989697, 'Sweet Home Rd, Buffalo, NY, USA'],
+[43.0000682,-78.7965721, 'Rensch Entrance, Buffalo, NY 14228, USA'],
+[42.9999275,-78.7941295, 'Hadley Rd, Buffalo, NY 14228, USA'],
+[43.0001452,-78.7882586, 'Putnam Way, Buffalo, NY 14228, USA'],
+[43.0035081,-78.7859101, 'Lee Road, Buffalo, NY 14228, USA'],
+[42.8830521,-77.3706917, 'Buffalo Rd, New York, USA'],
+[43.0124559,-78.7943277, 'Skinnersville Rd, Buffalo, NY 14228, USA'],
+[43.0083131,-78.7744056, 'N Forest Rd, Getzville, NY 14068, USA'],
+[42.986557,-78.762732, 'N Forest Rd, Buffalo, NY, USA'],
+[43.0520812,-78.8276439, 'Lockport Ave, North Tonawanda, NY 14120, USA'],
+[42.9781868,-78.7748288, 'Sheridan Dr, Buffalo, NY, USA']
+];
